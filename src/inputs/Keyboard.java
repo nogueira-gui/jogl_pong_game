@@ -18,12 +18,6 @@ public class Keyboard implements KeyListener {
         System.out.println("Key pressed: " + e.getKeyCode());
         if(e.getKeyCode() == KeyEvent.VK_ESCAPE)
             System.exit(0);
-        if(e.getKeyChar() == 'x')
-            cena.rotacionarX();
-        if(e.getKeyChar() == 'z')
-            cena.rotacionarZ();
-        if(e.getKeyChar() == 'y')
-            cena.rotacionarY();
         if (e.getKeyCode() == KeyEvent.VK_UP) {
             dy += 0.05f; // Mover para cima
         }
@@ -42,8 +36,6 @@ public class Keyboard implements KeyListener {
 
         cena.transladar(dx, dy, 0.0f);
 
-        if (e.getKeyChar() == 's' || e.getKeyChar() == 't' || e.getKeyChar() == 'c' || e.getKeyChar() == 'l')
-            cena.showAction(e.getKeyChar());
     }
     @Override
     public void keyReleased(KeyEvent e) { }

@@ -52,8 +52,6 @@ public class Mouse implements MouseListener {
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        if (isLeftButtonPressed())
-            mainScene.objectIsPressed(e.getX(), e.getY());
     }
 
     @Override
