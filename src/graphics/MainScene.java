@@ -3,16 +3,20 @@ package graphics;
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLAutoDrawable;
 import com.jogamp.opengl.GLEventListener;
-import com.jogamp.opengl.GLException;
 import com.jogamp.opengl.glu.GLU;
-import com.jogamp.opengl.glu.GLUquadric;
-import com.jogamp.opengl.glu.gl2.GLUgl2;
 import com.jogamp.opengl.util.gl2.GLUT;
 
 public class MainScene implements GLEventListener {
     private float xMin, xMax, yMin, yMax, zMin, zMax;
 
     private float dir_x, dir_y, dir_z, rot_x, rot_y, rot_z = 0.0f;
+
+    private float playerX, playerY = 0.0f;
+    private float ballX = 0.0f;
+    private float ballY = 0.0f;
+    private float ballSpeedX = 0.02f;
+    private float ballSpeedY = 0.02f;
+
     GLU glu;
 
     @Override
@@ -41,8 +45,9 @@ public class MainScene implements GLEventListener {
         drawPlayer(gl, dir_x);
 
         GLUT glut = new GLUT();
+        updateBallPosition();
         gl.glColor3f(1.0f, 1.0f, 1.0f);
-        drawBall(glut);
+        drawBall(gl, glut);
 
         for (float y = 0; y < 3; y++) {
             for (float i = -5; i < 0; i++) {
@@ -74,7 +79,8 @@ public class MainScene implements GLEventListener {
         float x2 = centerX + width / 2f + dx;
         float y1 = centerY - height / 2f;
         float y2 = centerY + height / 2f;
-
+        this.playerX = x1;
+        this.playerY = y1;
         // Desenha o retângulo
         gl.glBegin(GL2.GL_QUADS);
         gl.glColor3f(1, 1, 1); // Branco
@@ -108,39 +114,78 @@ public class MainScene implements GLEventListener {
         gl.glEnd();
     }
 
-    private void drawBall(GLUT glut) {
-        //TODO desenhar posicao da bola atualizada
+    private void drawBall(GL2 gl,GLUT glut) {
+        gl.glPushMatrix();
+        gl.glTranslatef(ballX, ballY, 0.0f);
         glut.glutSolidSphere(0.05, 15, 15);
+        gl.glPopMatrix();
     }
+
+
+    private void updateBallPosition() {
+        // Atualiza a posição da bola com base na velocidade
+        ballX += ballSpeedX;
+        ballY += ballSpeedY;
+        float ballRadius = 0.05f;
+        float playerY = this.yMin + 0.15f;
+        float playerWidth = 0.4f;
+
+        // Verifica se a bola atingiu as bordas da tela em xMin e xMax
+        if (ballX - ballRadius < xMin || ballX + ballRadius > xMax) {
+            ballSpeedX = -ballSpeedX;  // Inverte a direção no eixo x
+        }
+
+        // Verifica se a bola atingiu as bordas da tela em yMin e yMax
+        if (ballY + ballRadius > yMax) {
+            // Inverte a direção no eixo y
+            ballSpeedY = -ballSpeedY;
+        }
+
+        if (ballY - ballRadius < playerY &&
+                (ballX - ballRadius > playerX && ballX + ballRadius < (playerX + playerWidth))) {
+            ballSpeedY = -ballSpeedY;
+        }
+        if (ballY - ballRadius < yMin) {
+            // Inverte a direção no eixo y
+            ballSpeedY = -ballSpeedY;
+        }
+    }
+
 
     @Override
     public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
-        //obtem o contexto grafico Opengl
+        // Obtem o contexto gráfico OpenGL
         GL2 gl = drawable.getGL().getGL2();
 
-        //evita a divisão por zero
+        // Evita a divisão por zero
         if (height == 0) height = 1;
-        //calcula a proporção da janela (aspect ratio) da nova janela
+
+        // Calcula a proporção da janela (aspect ratio) da nova janela
         float aspect = (float) width / height;
 
-        //seta o viewport para abranger a janela inteira
+        // Calcula os novos limites da tela
+        float halfWidth = 1.0f * aspect;
+        float halfHeight = 1.0f;
+
+        xMin = -halfWidth;
+        xMax = halfWidth;
+        yMin = -halfHeight;
+        yMax = halfHeight;
+
+        // Seta o viewport para abranger a janela inteira
         gl.glViewport(0, 0, width, height);
 
-        //ativa a matriz de projeção
+        // Atualiza a matriz de projeção
         gl.glMatrixMode(GL2.GL_PROJECTION);
-        gl.glLoadIdentity(); //lê a matriz identidade
+        gl.glLoadIdentity(); // Lê a matriz identidade
 
-        //Projeção ortogonal
-        //true:   aspect >= 1 configura a altura de -1 para 1 : com largura maior
-        //false:  aspect < 1 configura a largura de -1 para 1 : com altura maior
-        if (width >= height)
-            gl.glOrtho(xMin * aspect, xMax * aspect, yMin, yMax, zMin, zMax);
-        else
-            gl.glOrtho(xMin, xMax, yMin / aspect, yMax / aspect, zMin, zMax);
+        // Projeção ortogonal
+        gl.glOrtho(xMin, xMax, yMin, yMax, zMin, zMax);
 
-        //ativa a matriz de modelagem
+        // Atualiza a matriz de modelagem
         gl.glMatrixMode(GL2.GL_MODELVIEW);
-        gl.glLoadIdentity(); //lê a matriz identidade
+        gl.glLoadIdentity(); // Lê a matriz identidade
+
         System.out.println("Reshape: " + width + ", " + height);
     }
 
