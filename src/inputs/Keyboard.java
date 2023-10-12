@@ -15,7 +15,6 @@ public class Keyboard implements KeyListener {
     public void keyPressed(KeyEvent e) {
         float dx = 0.0f;
         float dy = 0.0f;
-        System.out.println("Key pressed: " + e.getKeyCode());
         if(e.getKeyCode() == KeyEvent.VK_ESCAPE)
             System.exit(0);
         if (e.getKeyCode() == KeyEvent.VK_UP) {
