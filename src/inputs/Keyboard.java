@@ -2,41 +2,91 @@ package inputs;
 
 import com.jogamp.newt.event.KeyEvent;
 import com.jogamp.newt.event.KeyListener;
-import graphics.MainScene;
+import graphics.SinglePlayerScene;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Keyboard implements KeyListener {
-    private MainScene cena;
+    private SinglePlayerScene cena;
+    private float acceleration = 0.02f;
+    private float maxVelocity = 0.1f;
+    private float playerVelocityX = 0.0f;
+    private float playerVelocityY = 0.0f;
+    private Timer velocityResetTimer;
 
-    public Keyboard(MainScene cena){
+    public Keyboard(SinglePlayerScene cena) {
         this.cena = cena;
+        setupVelocityResetTimer();
+    }
+
+    private void setupVelocityResetTimer() {
+        velocityResetTimer = new Timer();
+    }
+
+    private void resetPlayerVelocity() {
+        playerVelocityX = 0.0f;
+        playerVelocityY = 0.0f;
+        updatePlayerPosition();
+    }
+
+    private void scheduleVelocityReset() {
+        velocityResetTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                resetPlayerVelocity();
+            }
+        }, 50);  // Adjust the delay (in milliseconds) as needed
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        float dx = 0.0f;
-        float dy = 0.0f;
-        if(e.getKeyCode() == KeyEvent.VK_ESCAPE)
+        if (e.getKeyCode() == KeyEvent.VK_ESCAPE)
             System.exit(0);
+
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            dy += 0.05f; // Mover para cima
+            accelerate(0, acceleration);
         }
 
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            dy -= 0.05f; // Mover para baixo
+            accelerate(0, -acceleration);
         }
 
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            dx -= 0.05f; // Mover para a esquerda
+            accelerate(-acceleration, 0);
         }
 
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            dx += 0.05f; // Mover para a direita
+            accelerate(acceleration, 0);
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        // Not used in this approach
+    }
+
+    private void accelerate(float dx, float dy) {
+        if (Math.abs(playerVelocityX + dx) <= maxVelocity) {
+            playerVelocityX += dx;
         }
 
-        cena.transladar(dx, dy, 0.0f);
+        if (Math.abs(playerVelocityY + dy) <= maxVelocity) {
+            playerVelocityY += dy;
+        }
 
+        updatePlayerPosition();
+
+        // Cancel any previously scheduled velocity reset
+        velocityResetTimer.cancel();
+        // Schedule a new velocity reset
+        setupVelocityResetTimer();
+        scheduleVelocityReset();
     }
-    @Override
-    public void keyReleased(KeyEvent e) { }
 
+    private void updatePlayerPosition() {
+        float dx = playerVelocityX;
+        float dy = playerVelocityY;
+        cena.transladar(dx, dy, 0.0f);
+    }
 }

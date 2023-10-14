@@ -2,17 +2,17 @@ package inputs;
 
 import com.jogamp.newt.event.MouseEvent;
 import com.jogamp.newt.event.MouseListener;
-import graphics.MainScene;
+import graphics.SinglePlayerScene;
 
 public class Mouse implements MouseListener {
-    MainScene mainScene;
+    SinglePlayerScene singlePlayerScene;
 
     boolean leftButtonPressed;
     boolean rightButtonPressed;
     boolean scrollButtonPressed;
 
-    public Mouse(MainScene mainScene) {
-        this.mainScene = mainScene;
+    public Mouse(SinglePlayerScene singlePlayerScene) {
+        this.singlePlayerScene = singlePlayerScene;
     }
 
     @Override

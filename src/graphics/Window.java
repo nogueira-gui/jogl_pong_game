@@ -7,7 +7,6 @@ import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.util.FPSAnimator;
 import inputs.Keyboard;
-import inputs.Mouse;
 
 public class Window {
     private static GLWindow glWindow = null;
@@ -23,12 +22,12 @@ public class Window {
         glWindow.setSize(screenWidth, screenHeight);
         //window.setResizable(false);
 
-        MainScene mainScene = new MainScene();
+        SinglePlayerScene singlePlayerScene = new SinglePlayerScene();
 
-        glWindow.addGLEventListener(mainScene); //adiciona a Cena a Janela
+        glWindow.addGLEventListener(singlePlayerScene); //adiciona a Cena a Janela
 
-        glWindow.addKeyListener(new Keyboard(mainScene));
-        glWindow.addMouseListener(new Mouse(mainScene));
+        glWindow.addKeyListener(new Keyboard(singlePlayerScene));
+//        glWindow.addMouseListener(new Mouse(singlePlayerScene));
 
         //window.requestFocus();
         FPSAnimator animator = new FPSAnimator(glWindow, 60);
@@ -42,7 +41,6 @@ public class Window {
                 System.exit(0);
             }
         });
-
 //        glWindow.setFullscreen(true);
         glWindow.setVisible(true);
     }
