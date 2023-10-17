@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e85b5a15-e1ad-4da4-998d-9de818c61506" name="Changes" comment=":bug: fix: Textures now have colors" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lmello &lt;melloluc02@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b0956d9b-7b43-4fe8-8e6d-4c82b95f72bc" />
+        <option name="url" value="git@github.com:nogueira-gui/jogl_pong_game.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2WfYcmmhKTCc9Y1LLpTsG3vSA08" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "C:/Users/mello/IdeaProjects/PONG/libs/jogl-windows-amd64",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15429688",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mello\IdeaProjects\PONG\src\assets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Engine.Main">
+    <configuration name="Engine.Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.engine.Main" />
+      <module name="PONG" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Graphics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.graphics.Graphics" />
+      <module name="PONG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.graphics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Metrics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.metrics.Metrics" />
+      <module name="PONG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.metrics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="PONG-OFFLIVE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="PONG-OFFLIVE" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Engine.Main" />
+      <item itemvalue="Application.Metrics" />
+      <item itemvalue="Application.Graphics" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Metrics" />
+        <item itemvalue="Application.Graphics" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e85b5a15-e1ad-4da4-998d-9de818c61506" name="Changes" comment="" />
+      <created>1697125183904</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697125183904</updated>
+    </task>
+    <task id="LOCAL-00001" summary="aaa">
+      <option name="closed" value="true" />
+      <created>1697386921007</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697386921007</updated>
+    </task>
+    <task id="LOCAL-00002" summary=":tada: Init: Functional game">
+      <option name="closed" value="true" />
+      <created>1697412161334</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697412161334</updated>
+    </task>
+    <task id="LOCAL-00003" summary=":tada: Init: Functional game">
+      <option name="closed" value="true" />
+      <created>1697412438594</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697412438594</updated>
+    </task>
+    <task id="LOCAL-00004" summary=":recycle: refactor: Fixing imports and variable scopes">
+      <option name="closed" value="true" />
+      <created>1697485904475</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697485904476</updated>
+    </task>
+    <task id="LOCAL-00005" summary=":recycle: refactor: Fixing imports and variable scopes">
+      <option name="closed" value="true" />
+      <created>1697485927328</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697485927328</updated>
+    </task>
+    <task id="LOCAL-00006" summary=":recycle: refactor: Fixing imports and variable scopes">
+      <option name="closed" value="true" />
+      <created>1697485951617</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697485951617</updated>
+    </task>
+    <task id="LOCAL-00007" summary=":sparkles: feat: Adding pause and vsync toggle">
+      <option name="closed" value="true" />
+      <created>1697486104847</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697486104847</updated>
+    </task>
+    <task id="LOCAL-00008" summary=":sparkles: feat: Adding texture management and render">
+      <option name="closed" value="true" />
+      <created>1697486152428</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697486152428</updated>
+    </task>
+    <task id="LOCAL-00009" summary=":sparkles: feat: Adding texture management and render">
+      <option name="closed" value="true" />
+      <created>1697486165814</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697486165814</updated>
+    </task>
+    <task id="LOCAL-00010" summary=":sparkles: feat: Adding score, live and fps counter and initial game cycle (win/lost)">
+      <option name="closed" value="true" />
+      <created>1697486354076</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697486354076</updated>
+    </task>
+    <task id="LOCAL-00011" summary=":recycle: refactor: Changing collision system">
+      <option name="closed" value="true" />
+      <created>1697486389592</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697486389592</updated>
+    </task>
+    <task id="LOCAL-00012" summary=":recycle: refactor: Removing redundant code">
+      <option name="closed" value="true" />
+      <created>1697487203415</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1697487203415</updated>
+    </task>
+    <task id="LOCAL-00013" summary=":recycle: refactor: Simplifying and adding requirements according to A3 doc">
+      <option name="closed" value="true" />
+      <created>1697516808375</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697516808375</updated>
+    </task>
+    <task id="LOCAL-00014" summary=":recycle: refactor: Making all textures load before game init">
+      <option name="closed" value="true" />
+      <created>1697516919023</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1697516919023</updated>
+    </task>
+    <task id="LOCAL-00015" summary=":sparkles: feat: Adding blockstep according to params">
+      <option name="closed" value="true" />
+      <created>1697516942845</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1697516942845</updated>
+    </task>
+    <task id="LOCAL-00016" summary=":sparkles: feat: Adding blockstep according to params">
+      <option name="closed" value="true" />
+      <created>1697517040983</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1697517040983</updated>
+    </task>
+    <task id="LOCAL-00017" summary=":sparkles: feat: Adding blockstep according to params">
+      <option name="closed" value="true" />
+      <created>1697517059164</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697517059164</updated>
+    </task>
+    <task id="LOCAL-00018" summary=":bug: fix: Fixing bountaries bug when fullscreen">
+      <option name="closed" value="true" />
+      <created>1697547692200</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697547692200</updated>
+    </task>
+    <task id="LOCAL-00019" summary=":bug: fix: Textures now have colors">
+      <option name="closed" value="true" />
+      <created>1697547751120</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1697547751120</updated>
+    </task>
+    <task id="LOCAL-00020" summary=":bug: fix: Textures now have colors">
+      <option name="closed" value="true" />
+      <created>1697547809287</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1697547809287</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="refactor" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="aaa" />
+    <MESSAGE value=":tada: Init: Functional game" />
+    <MESSAGE value=":recycle: refactor: Fixing imports and variable scopes" />
+    <MESSAGE value=":sparkles: feat: Adding pause and vsync toggle" />
+    <MESSAGE value=":sparkles: feat: Adding texture management and render" />
+    <MESSAGE value=":sparkles: feat: Adding score, live and fps counter and initial game cycle (win/lost)" />
+    <MESSAGE value=":recycle: refactor: Changing collision system" />
+    <MESSAGE value=":recycle: refactor: Removing redundant code" />
+    <MESSAGE value=":recycle: refactor: Simplifying and adding requirements according to A3 doc" />
+    <MESSAGE value=":sparkles: feat: Adding blockstep according to params" />
+    <MESSAGE value=":bug: fix: Fixing bountaries bug when fullscreen" />
+    <MESSAGE value=":recycle: refactor: Making all textures load before game init" />
+    <MESSAGE value=":bug: fix: Textures now have colors" />
+    <option name="LAST_COMMIT_MESSAGE" value=":bug: fix: Textures now have colors" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
