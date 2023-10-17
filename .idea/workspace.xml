@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85b5a15-e1ad-4da4-998d-9de818c61506" name="Changes" comment=":bug: fix: Textures now have colors" />
+    <list default="true" id="e85b5a15-e1ad-4da4-998d-9de818c61506" name="Changes" comment=":bug: fix: Textures now have colors">
+      <change beforePath="$PROJECT_DIR$/src/org/graphics/Graphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/graphics/Graphics.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +74,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
     "last_opened_file_path": "C:/Users/mello/IdeaProjects/PONG/libs/jogl-windows-amd64",

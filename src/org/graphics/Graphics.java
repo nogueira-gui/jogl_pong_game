@@ -54,6 +54,9 @@ public class Graphics {
 
         if (texture != null) {
             gl.glBindTexture(GL2.GL_TEXTURE_2D, texture.getTextureObject());
+
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_NEAREST);
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_NEAREST);
         }
 
         gl.glColor4f(1, 1, 1, 1);
@@ -92,6 +95,9 @@ public class Graphics {
 
             if (texture != null) {
                 gl.glBindTexture(GL2.GL_TEXTURE_2D, texture.getTextureObject());
+
+                texture.setTexParameteri(gl, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_NEAREST);
+                texture.setTexParameteri(gl, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_NEAREST);
             }
 
             gl.glColor4f(1, 1, 1, 1);
