@@ -3,7 +3,7 @@ package org.graphics;
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLAutoDrawable;
 import com.jogamp.opengl.GLEventListener;
-import org.resource.TextureManager;
+import org.textures.TextureManager;
 import org.world.World;
 
 public class EventListener implements GLEventListener {

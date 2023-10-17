@@ -1,7 +1,8 @@
-package org.resource;
+package org.textures;
 
 import com.jogamp.opengl.util.texture.Texture;
 import com.jogamp.opengl.util.texture.awt.AWTTextureIO;
+import org.graphics.Color;
 import org.graphics.Renderer;
 
 import javax.imageio.ImageIO;
@@ -10,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Objects;
 
 public class TextureManager {
@@ -34,6 +36,10 @@ public class TextureManager {
             System.out.println("Loading textures...");
             File[] files = getFiles();
 
+            if (files == null) {
+                return;
+            }
+
             int index = 0;
             final int totalFiles = files.length;
             for (File file : files) {
@@ -46,7 +52,14 @@ public class TextureManager {
                     if (image != null) {
                         filename = filename.substring(0, filename.indexOf("."));
 
-                        textures.add(new TextureObject(filename, extractTextureFromImage(image)));
+                        Map<Integer, Integer> imageMap = ColorExtractor.extractImagePixels(file);
+
+                        int[] mostCommonColor = ColorExtractor.getMostCommonColor(imageMap);
+
+                        Color predominantColor = new Color(mostCommonColor[0], mostCommonColor[1], mostCommonColor[2], 1);
+
+
+                        textures.add(new TextureObject(filename, extractTextureFromImage(image), predominantColor));
 
                         image.flush();
                         index++;
@@ -68,5 +81,15 @@ public class TextureManager {
         }
 
         return null;
+    }
+
+    public static Color getPredominantColor(String name) {
+        for (TextureObject texture : textures) {
+            if (texture.getTextureName().equals(name)) {
+                return texture.getPredominantColor();
+            }
+        }
+
+        return new Color(255, 255, 255, 1);
     }
 }

@@ -5,7 +5,7 @@ import org.graphics.Color;
 import org.graphics.Graphics;
 import org.graphics.Screen;
 import org.objects.Rectangle;
-import org.resource.TextureManager;
+import org.textures.TextureManager;
 
 public class InfoBoard extends Rectangle {
     public static final float BOARD_WIDTH = Screen.getScreenWidth();

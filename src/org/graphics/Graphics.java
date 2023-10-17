@@ -2,7 +2,7 @@ package org.graphics;
 
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.util.texture.Texture;
-import org.resource.TextureManager;
+import org.textures.TextureManager;
 
 public class Graphics {
 
@@ -51,6 +51,7 @@ public class Graphics {
         float height = 64 * scaleFactor;
 
         Texture texture = TextureManager.getTexture(imageName);
+        Color color = TextureManager.getPredominantColor(imageName);
 
         if (texture != null) {
             gl.glBindTexture(GL2.GL_TEXTURE_2D, texture.getTextureObject());
@@ -59,7 +60,10 @@ public class Graphics {
             texture.setTexParameteri(gl, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_NEAREST);
         }
 
-        gl.glColor4f(1, 1, 1, 1);
+
+        gl.glColor4f(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
+
+
 
         float x1 = x - (width / 2);
         float y1 = y - (height / 2);
@@ -91,7 +95,10 @@ public class Graphics {
     public static void writeText(float x, float y, float width, float height, String text) {
         int position = 1;
         for (String c : text.toLowerCase().split("")) {
-            Texture texture = TextureManager.getTexture("letter_" + c);
+            String letter = "letter_" + c;
+
+            Texture texture = TextureManager.getTexture(letter);
+            Color color = TextureManager.getPredominantColor(letter);
 
             if (texture != null) {
                 gl.glBindTexture(GL2.GL_TEXTURE_2D, texture.getTextureObject());
@@ -100,7 +107,7 @@ public class Graphics {
                 texture.setTexParameteri(gl, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_NEAREST);
             }
 
-            gl.glColor4f(1, 1, 1, 1);
+            gl.glColor4f(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
 
             float x1 = (float) ((x + position * width / 1.5) - (width / 2));
             float y1 = y - (height / 2);

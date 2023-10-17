@@ -1,14 +1,17 @@
-package org.resource;
+package org.textures;
 
 import com.jogamp.opengl.util.texture.Texture;
+import org.graphics.Color;
 
 public class TextureObject {
     private final String textureName;
     private final Texture texture;
+    private final Color predominantColor;
 
-    public TextureObject(String name, Texture texture) {
+    public TextureObject(String name, Texture texture, Color color) {
         this.textureName = name;
         this.texture = texture;
+        this.predominantColor = color;
     }
 
     public String getTextureName() {
@@ -17,5 +20,9 @@ public class TextureObject {
 
     public Texture getTexture() {
         return texture;
+    }
+
+    public Color getPredominantColor() {
+        return  predominantColor;
     }
 }
