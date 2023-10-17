@@ -34,10 +34,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -45,6 +45,9 @@
         <option name="url" value="git@github.com:nogueira-gui/jogl_pong_game.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -69,7 +72,6 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
     "last_opened_file_path": "C:/Users/mello/IdeaProjects/PONG/libs/jogl-windows-amd64",
@@ -85,33 +87,13 @@
       <recent name="C:\Users\mello\IdeaProjects\PONG\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Engine.Main">
-    <configuration name="Engine.Main" type="Application" factoryName="Application">
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.engine.Main" />
       <module name="PONG" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Graphics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.graphics.Graphics" />
-      <module name="PONG" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.graphics.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Metrics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.metrics.Metrics" />
-      <module name="PONG" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.metrics.*" />
+          <option name="PATTERN" value="org.engine.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,15 +114,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Engine.Main" />
-      <item itemvalue="Application.Metrics" />
-      <item itemvalue="Application.Graphics" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Metrics" />
-        <item itemvalue="Application.Graphics" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
