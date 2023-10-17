@@ -19,7 +19,7 @@ public class Block extends Rectangle {
     }
 
     public boolean isDestroyed() {
-        return isDestroyed;
+        return !isDestroyed;
     }
 
     @Override

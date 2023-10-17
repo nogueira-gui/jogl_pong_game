@@ -82,7 +82,7 @@ public class World {
             }
 
             for (Block block : blocks) {
-                if (!block.isDestroyed()) {
+                if (block.isDestroyed()) {
                     if (checkCollision(ball, block)) {
                         block.destroy();
                         ball.flipXDirection();
@@ -103,7 +103,7 @@ public class World {
             board.render(player);
 
             for (Block block: blocks) {
-                if (!block.isDestroyed()) {
+                if (block.isDestroyed()) {
                     block.render();
                 }
             }

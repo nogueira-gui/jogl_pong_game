@@ -10,8 +10,8 @@ public class GameLoop {
     public static boolean running = false;
     private static boolean paused = false;
 
-    private final static int targetFPS = 60;
-    private final static int targetTime = NANOSECOND / targetFPS;
+    private static final int targetFPS = 60;
+    private static final int targetTime = NANOSECOND / targetFPS;
     private static int currentFPS = 0;
 
     private static int updates = 0;
@@ -89,18 +89,6 @@ public class GameLoop {
     }
 
     public static void pauseGame() {
-        paused = true;
-    }
-
-    public static void pauseGame(int millis) {
-        paused = false;
-
-        try {
-            Thread.sleep(millis);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
         paused = true;
     }
 

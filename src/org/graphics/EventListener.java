@@ -9,13 +9,11 @@ import org.world.World;
 public class EventListener implements GLEventListener {
     public static GL2 gl = null;
 
-    public static int vSync = 1;
-
     @Override
     public void init(GLAutoDrawable drawable) {
         gl = drawable.getGL().getGL2();
 
-        gl.setSwapInterval(vSync);
+        gl.setSwapInterval(0);
 
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
         gl.glClearColor(0,0,0,1);
@@ -51,13 +49,5 @@ public class EventListener implements GLEventListener {
         gl.glOrtho(-halfWidth, halfWidth, -halfHeight, halfHeight, -1, 1);
 
         gl.glMatrixMode(GL2.GL_MODELVIEW);
-    }
-
-    public static void toggleVSync() {
-        if (vSync == 1) {
-            vSync = 0;
-        } else {
-            vSync = 1;
-        }
     }
 }

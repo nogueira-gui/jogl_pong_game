@@ -8,13 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e85b5a15-e1ad-4da4-998d-9de818c61506" name="Changes" comment=":sparkles: feat: Now, the ball starts with the platform X">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/engine/GameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/engine/GameLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/entities/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/entities/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/entities/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/entities/Block.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/entities/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/graphics/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/graphics/EventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/graphics/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/graphics/Screen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/inputs/RendererInputControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/inputs/RendererInputControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/world/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/world/World.java" afterDir="false" />
     </list>
@@ -360,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697561238725</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary=":sparkles: feat: Now, the ball starts with the platform X">
+      <option name="closed" value="true" />
+      <created>1697580268587</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1697580268587</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">
