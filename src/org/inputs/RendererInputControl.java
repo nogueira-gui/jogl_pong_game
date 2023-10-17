@@ -2,7 +2,6 @@ package org.inputs;
 
 import com.jogamp.newt.event.KeyEvent;
 import org.engine.GameLoop;
-import org.graphics.EventListener;
 import org.graphics.Renderer;
 import org.world.World;
 
@@ -10,35 +9,9 @@ public class RendererInputControl extends KeyboardListener {
     @Override
     public void keyPressed(KeyEvent e) {
         if (getKey(KeyEvent.VK_CONTROL)) {
-            if (getKey(KeyEvent.VK_SHIFT)){
-                if (getKey(KeyEvent.VK_EQUALS)) {
-                    World.increaseBlockStep();
-
-                    if (GameLoop.isPaused()) {
-                        GameLoop.resumeGame();
-
-                        GameLoop.pauseGame(20);
-                    }
-                }
-
-                if (getKey(KeyEvent.VK_MINUS)) {
-                    World.decreaseBlockStep();
-
-                    if (GameLoop.isPaused()) {
-                        GameLoop.resumeGame();
-
-                        GameLoop.pauseGame(20);
-                    }
-                }
-            }
-
             if (getKey(KeyEvent.VK_R)) {
-                World.resetWorld();
+                World.resetWorld(true);
                 GameLoop.resumeGame();
-            }
-
-            if (getKey(KeyEvent.VK_S)) {
-                EventListener.toggleVSync();
             }
 
             if (getKey(KeyEvent.VK_ESCAPE) || getKey(KeyEvent.VK_C)) {
@@ -57,8 +30,12 @@ public class RendererInputControl extends KeyboardListener {
         }
 
         if (getKey(KeyEvent.VK_ESCAPE) || GameLoop.isPaused() && getKey(KeyEvent.VK_SPACE)) {
-            if (World.isGameLost()) {
+            if (World.isGameLost() || World.isGameWon()) {
                 return;
+            }
+
+            if (World.ignoreNextThrow) {
+                World.ignoreNextThrow = false;
             }
 
             if (GameLoop.isPaused()) {

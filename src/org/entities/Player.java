@@ -56,8 +56,8 @@ public class Player extends Rectangle {
         return this.y;
     }
 
-    public void addPoints() {
-        score++;
+    public void addPoints(int point) {
+        score += point;
     }
 
     public int getScore() {
@@ -75,4 +75,9 @@ public class Player extends Rectangle {
     public void resetPlayerX() {
         this.x = 0;
     }
+
+    public void resetScore() {
+        this.score = 0;
+    }
+
 }

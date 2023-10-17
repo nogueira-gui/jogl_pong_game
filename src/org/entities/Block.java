@@ -8,6 +8,7 @@ public class Block extends Rectangle {
     public final static int BLOCK_HEIGHT = 20;
 
     private boolean isDestroyed = false;
+    public static int BLOCK_POINT = 0;
 
     public Block(float x, float y, Color color) {
         super(x, y, BLOCK_WIDTH, BLOCK_HEIGHT, color);
@@ -36,5 +37,9 @@ public class Block extends Rectangle {
         if (!isDestroyed) {
             super.render();
         }
+    }
+
+    public static void setBlockPoint(int number) {
+        BLOCK_POINT = number;
     }
 }

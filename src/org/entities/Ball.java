@@ -113,6 +113,7 @@ public class Ball extends Circle {
 
     public void throwBall() {
 
+        if (!ballThrown && !World.ignoreNextThrow) {
             yInput++;
             ballThrown = true;
         }

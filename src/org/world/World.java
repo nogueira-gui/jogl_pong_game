@@ -19,9 +19,10 @@ public class World {
     private static InfoBoard board;
 
     private static boolean lostGame = false;
+    private static boolean wonGame = false;
 
-    private static int blockStepX = 1;
-    private static int blockStepY = 1;
+    private static int blockStepX = 6;
+    private static int blockStepY = 4;
 
     private static final int MAX_BLOCKSTEP_X = 6;
     private static final int MIN_BLOCKSTEP_X = 1;
@@ -29,18 +30,49 @@ public class World {
     private static final int MAX_BLOCKSTEP_Y = 4;
     private static final int MIN_BLOCKSTEP_Y = 1;
 
+    private static final int MAX_POINTS = 200;
+    private static int pointMultiplier = 3;
+
+    private static int levelCounter = 1;
+    private final static int FINAL_LEVEL = 4;
+
+    public static boolean ignoreNextThrow = false;
+
     static {
         initWorld();
     }
 
     public static void update() {
         try {
+            if (player.getScore() >= MAX_POINTS) {
+                levelCounter++;
+
+                if (levelCounter > FINAL_LEVEL) {
+                    wonGame = true;
+
+                    System.out.println("You won! Ctrl + R to restart");
+
+                    GameLoop.pauseGame();
+
+                    return;
+                }
+
+                GameLoop.pauseGame();
+
+                System.out.printf("Level %d finished! Press SPACE to continue\n", levelCounter - 1);
+                ignoreNextThrow = true;
+
+                decreaseBlockStep();
+            }
+
             player.update();
             ball.update();
             board.update();
 
             if (player.getRemainingLives() == 0) {
                 lostGame = !lostGame;
+
+                System.out.println("You lost! Ctrl + R to restart");
 
                 GameLoop.pauseGame();
             }
@@ -56,7 +88,7 @@ public class World {
                         ball.flipXDirection();
                         ball.flipYDirection();
 
-                        player.addPoints();
+                        player.addPoints(Block.BLOCK_POINT);
                     }
                 }
                 block.update();
@@ -139,15 +171,32 @@ public class World {
         createBlocks(blockStepX, blockStepY);
     }
 
-    public static void resetWorld() {
-        clearObjects();
+    public static void resetWorld(boolean resetGame) {
+        if (resetGame) {
+            clearObjects();
 
-        lostGame = false;
+            lostGame = false;
+            wonGame = false;
 
-        board = new InfoBoard();
-        player = new Player();
+            levelCounter = 1;
+
+            ignoreNextThrow = false;
+
+            blockStepX = MAX_BLOCKSTEP_X;
+            blockStepY = MAX_BLOCKSTEP_Y;
+
+            board = new InfoBoard();
+            player = new Player();
+            ball = new Ball();
+
+            createBlocks(blockStepX, blockStepY);
+        }
+
         ball = new Ball();
+        player.resetPlayerX();
+        player.resetScore();
 
+        blocks.clear();
         createBlocks(blockStepX, blockStepY);
     }
 
@@ -166,6 +215,9 @@ public class World {
 
         int BLOCKS_PER_ROW = SCREEN_WIDTH / (BLOCK_WIDTH + X_GAP);
         int BLOCKS_PER_COLUMN = (int) Math.ceil(((SCREEN_HEIGHT - InfoBoard.BOARD_HEIGHT) / (BLOCK_HEIGHT + Y_GAP)));
+
+        int POINT_BY_BLOCK = (int) Math.ceil((double) MAX_POINTS / (BLOCKS_PER_ROW * BLOCKS_PER_COLUMN)) * pointMultiplier;
+        Block.setBlockPoint(POINT_BY_BLOCK);
 
         for (int row = 1; row <= BLOCKS_PER_COLUMN; row++) {
             for (int column = 0; column < BLOCKS_PER_ROW; column++) {
@@ -186,6 +238,7 @@ public class World {
     }
 
     public static void decreasePlayerLife() {
+        ball.resetBall();
         player.decreaseLive();
     }
 
@@ -193,23 +246,19 @@ public class World {
         return lostGame;
     }
 
-    public static void resetPlayerPosition() {
-        player.resetPlayerX();
+    public static boolean isGameWon() {
+        return wonGame;
     }
 
-    public static void increaseBlockStep() {
-        blockStepX++;
-        blockStepY++;
-
-        blockStepX = Utils.clamp(blockStepX, MIN_BLOCKSTEP_X, MAX_BLOCKSTEP_X);
-        blockStepY = Utils.clamp(blockStepY, MIN_BLOCKSTEP_Y, MAX_BLOCKSTEP_Y);
-
-        resetWorld();
+    public static void resetPlayerPosition() {
+        player.resetPlayerX();
     }
 
     public static void decreaseBlockStep() {
         blockStepX--;
         blockStepY--;
+
+        pointMultiplier = Utils.clamp(pointMultiplier - 1, 1, 3);
 
         blockStepX = Utils.clamp(blockStepX, MIN_BLOCKSTEP_X, MAX_BLOCKSTEP_X);
 
@@ -217,7 +266,7 @@ public class World {
             blockStepY = Utils.clamp(blockStepY, MIN_BLOCKSTEP_Y, MAX_BLOCKSTEP_Y);
         }
 
-        resetWorld();
+        resetWorld(false);
     }
 
     public static float getPlayerX() {
