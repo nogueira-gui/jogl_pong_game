@@ -11,9 +11,11 @@ import java.util.Random;
 
 public class Ball extends Circle {
 
-    private float yInput = -1;
+    private float yInput = 0;
     private float xInput = 0;
 
+    private boolean isBallCollided = false;
+    private boolean ballThrown = false;
     private boolean initFall = true;
 
     public Ball() {
@@ -23,6 +25,13 @@ public class Ball extends Circle {
     @Override
     public void update() {
         super.update();
+
+        if (!ballThrown) {
+            x = World.getPlayerX();
+            y = World.getPlayerY() + (radius * 2) - 3;
+
+            return;
+        }
 
         if (y <= BOTTOM_BOUNDARY) {
             World.decreasePlayerLife();
@@ -38,9 +47,11 @@ public class Ball extends Circle {
             xInput = -xInput;
         }
 
-        float SPEED = 250f;
-        y += yInput * SPEED * GameLoop.updateDelta();
-        x += xInput * SPEED * GameLoop.updateDelta();
+        float HORIZONTAL_SPEED = 250f;
+        float VERTICAL_SPEED = 250f;
+
+        y += yInput * VERTICAL_SPEED * GameLoop.updateDelta();
+        x += xInput * HORIZONTAL_SPEED * GameLoop.updateDelta();
     }
 
     @Override
@@ -51,12 +62,25 @@ public class Ball extends Circle {
         Graphics.fillCircle(x, y, radius, color);
     }
 
+    @Override
+    public void calculateBoundaries() {
+        super.calculateBoundaries();
+
+        if (!ballThrown) {
+            LEFT_BOUNDARY += ((float) Player.PLAYER_WIDTH / 2) - radius;
+            RIGHT_BOUNDARY -= ((float) Player.PLAYER_WIDTH / 2) - radius;
+        }
+    }
+
     public void flipXDirection() {
-        initFall = false;
     }
 
     public void flipYDirection() {
-        if (initFall) {
+        if (ballThrown) {
+            isBallCollided = true;
+        }
+
+        if (isBallCollided && ballThrown && initFall) {
             xInput = randomInitX();
             initFall = false;
         }
@@ -75,13 +99,22 @@ public class Ball extends Circle {
         return value;
     }
 
-    private void resetBall() {
+    public void resetBall() {
         x = 0;
         y = 0;
 
         xInput = 0;
-        yInput = -1;
+        yInput = 0;
 
+        isBallCollided = false;
+        ballThrown = false;
         initFall = true;
+    }
+
+    public void throwBall() {
+
+            yInput++;
+            ballThrown = true;
+        }
     }
 }

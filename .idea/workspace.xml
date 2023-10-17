@@ -7,9 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e85b5a15-e1ad-4da4-998d-9de818c61506" name="Changes" comment=":sparkles: feat: Setting primary color as image background - better blending">
+    <list default="true" id="e85b5a15-e1ad-4da4-998d-9de818c61506" name="Changes" comment=":sparkles: feat: Now, the ball starts with the platform X">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/textures/ColorExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/textures/ColorExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/engine/GameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/engine/GameLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/entities/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/entities/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/entities/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/entities/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/graphics/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/graphics/EventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/graphics/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/graphics/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/inputs/RendererInputControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/inputs/RendererInputControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/world/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/world/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +125,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Screen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.graphics.Screen" />
+      <module name="PONG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.graphics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="PONG-OFFLIVE" />
       <method v="2">
@@ -134,6 +154,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Screen" />
         <item itemvalue="Application.ColorExtractor" />
       </list>
     </recent_temporary>
@@ -323,7 +344,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697558707925</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary=":sparkles: feat: Setting primary color as image background - better blending">
+      <option name="closed" value="true" />
+      <created>1697559295377</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1697559295377</updated>
+    </task>
+    <task id="LOCAL-00024" summary=":sparkles: feat: Now, the ball starts with the platform X">
+      <option name="closed" value="true" />
+      <created>1697561238725</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1697561238725</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -370,7 +407,8 @@
     <MESSAGE value=":bug: fix: Textures now have colors" />
     <MESSAGE value=":wrench: fix: Making textures not blurry" />
     <MESSAGE value=":sparkles: feat: Setting primary color as image background - better blending" />
-    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: feat: Setting primary color as image background - better blending" />
+    <MESSAGE value=":sparkles: feat: Now, the ball starts with the platform X" />
+    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: feat: Now, the ball starts with the platform X" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

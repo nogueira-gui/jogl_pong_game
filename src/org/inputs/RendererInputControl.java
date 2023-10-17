@@ -48,6 +48,10 @@ public class RendererInputControl extends KeyboardListener {
             return;
         }
 
+        if (getKey(KeyEvent.VK_SPACE)) {
+            World.throwBall();
+        }
+
         if (getKey(KeyEvent.VK_F11)) {
             toggleFullscreen();
         }

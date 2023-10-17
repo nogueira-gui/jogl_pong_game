@@ -219,4 +219,16 @@ public class World {
 
         resetWorld();
     }
+
+    public static float getPlayerX() {
+        return player.getX();
+    }
+
+    public static float getPlayerY() {
+        return player.getY();
+    }
+
+    public static void throwBall() {
+        ball.throwBall();
+    }
 }
