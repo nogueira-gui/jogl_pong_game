@@ -26,7 +26,7 @@ public class Player extends Rectangle {
         super.update();
 
         float xInput = 0;
-        float SPEED = 300f;
+        float SPEED = 325f;
 
         if(KeyboardListener.getKey(KeyEvent.VK_A) || KeyboardListener.getKey(KeyEvent.VK_LEFT)) {
             xInput--;

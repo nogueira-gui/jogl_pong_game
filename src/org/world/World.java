@@ -114,11 +114,11 @@ public class World {
         float circleDistanceX = Math.abs(ball.getX() - block.getX());
         float circleDistanceY = Math.abs(ball.getY() - block.getY());
 
-        if (circleDistanceX > ((float) Block.BLOCK_WIDTH / 2 + ball.getRadius())) {
+        if (circleDistanceX > ((float) Block.BLOCK_WIDTH / 2 + ball.getRadius() - 2)) {
             return false;
         }
 
-        if (circleDistanceY > ((float) Block.BLOCK_HEIGHT / 2 + ball.getRadius())) {
+        if (circleDistanceY > ((float) Block.BLOCK_HEIGHT / 2 + ball.getRadius() - 2)) {
             return false;
         }
 
@@ -126,17 +126,23 @@ public class World {
             return true;
         }
 
-        return circleDistanceY <= (float) Block.BLOCK_HEIGHT / 2;
+        if (circleDistanceY <= (float) Block.BLOCK_HEIGHT / 2) {
+            return true;
+        }
+
+        float cornerDistance = (float) (Math.pow((circleDistanceX - (float) Block.BLOCK_WIDTH  / 2), 2) + Math.pow((circleDistanceY - (float) Block.BLOCK_HEIGHT / 2), 2));
+
+        return cornerDistance <= Math.pow(ball.getRadius(), 2);
     }
     private static boolean checkCollision(Ball ball, Player player) {
         float circleDistanceX = Math.abs(ball.getX() - player.getX());
         float circleDistanceY = Math.abs(ball.getY() - player.getY());
 
-        if (circleDistanceX > ((float) Player.PLAYER_WIDTH / 2 + ball.getRadius())) {
+        if (circleDistanceX > ((float) Player.PLAYER_WIDTH / 2 + ball.getRadius() - 5)) {
             return false;
         }
 
-        if (circleDistanceY > ((float) Player.PLAYER_HEIGHT / 2 + ball.getRadius())) {
+        if (circleDistanceY > ((float) Player.PLAYER_HEIGHT / 2 + ball.getRadius() - 5)) {
             return false;
         }
 
