@@ -18,6 +18,8 @@ public class Ball extends Circle {
     private boolean ballThrown = false;
     private boolean initFall = true;
 
+    private int hitCount = 0;
+
     public Ball() {
         super(0, 0, 10, new Color(255, 255, 255, 255));
     }
@@ -41,6 +43,7 @@ public class Ball extends Circle {
 
         if (y == UPPER_BOUNDARY) {
             yInput = -yInput;
+            hitCount++;
         }
 
         if (x == LEFT_BOUNDARY || x == RIGHT_BOUNDARY) {
@@ -86,6 +89,7 @@ public class Ball extends Circle {
         }
 
         yInput = -yInput;
+        hitCount++;
     }
 
     private int randomInitX() {
@@ -117,5 +121,9 @@ public class Ball extends Circle {
             yInput++;
             ballThrown = true;
         }
+    }
+
+    public int getHitCount() {
+        return hitCount;
     }
 }

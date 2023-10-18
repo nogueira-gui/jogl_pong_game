@@ -9,6 +9,7 @@ import org.graphics.Color;
 import org.graphics.Screen;
 import org.utils.Utils;
 
+import java.util.Random;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class World {
@@ -38,6 +39,9 @@ public class World {
 
     public static boolean ignoreNextThrow = false;
 
+    private static float baseProbability = 0f;
+
+
     static {
         initWorld();
     }
@@ -63,6 +67,16 @@ public class World {
                 ignoreNextThrow = true;
 
                 decreaseBlockStep();
+            }
+
+            float probability = (float) (baseProbability + (0.01 * ball.getHitCount()));
+            float generator = new Random().nextFloat();
+
+            System.out.println(probability);
+            System.out.println(generator);
+
+            if (generator <= probability) {
+                System.out.println("GENERATED");
             }
 
             player.update();
