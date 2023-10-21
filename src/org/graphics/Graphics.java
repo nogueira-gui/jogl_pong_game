@@ -7,21 +7,67 @@ import org.textures.TextureManager;
 public class Graphics {
 
     private static final GL2 gl = EventListener.gl;
-
     public static void fillRect(float x, float y, float width, float height, Color color) {
         float x1 = x - (width / 2);
         float y1 = y - (height / 2);
         float x2 = x1 + width;
         float y2 = y1 + height;
 
-        gl.glColor4f(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
+        float z = -12.8f;
 
-        gl.glBegin(GL2.GL_QUADS);
-            gl.glVertex2f(x1, y1);
-            gl.glVertex2f(x2, y1);
-            gl.glVertex2f(x2, y2);
-            gl.glVertex2f(x1, y2);
-        gl.glEnd();
+
+
+        gl.glPushMatrix();
+            // Frente
+            gl.glBegin(GL2.GL_QUADS);
+                gl.glColor3f(color.getRed(), color.getGreen(), color.getBlue());
+                gl.glVertex3f(x1, y1, z);
+                gl.glVertex3f(x2, y1, z);
+                gl.glVertex3f(x2, y2, z);
+                gl.glVertex3f(x1, y2, z);
+            gl.glEnd();
+
+            // Tras
+            gl.glBegin(GL2.GL_QUADS);
+                gl.glVertex3f(x1, y1, -z);
+                gl.glVertex3f(x2, y1, -z);
+                gl.glVertex3f(x2, y2, -z);
+                gl.glVertex3f(x1, y2, -z);
+            gl.glEnd();
+
+            // Direita
+            gl.glBegin(GL2.GL_QUADS);
+                gl.glVertex3f(x2, y1, -z);
+                gl.glVertex3f(x2, y1, z);
+                gl.glVertex3f(x2, y2, z);
+                gl.glVertex3f(x2, y2, -z);
+            gl.glEnd();
+
+            // Esquerda
+            gl.glBegin(GL2.GL_QUADS);
+                gl.glVertex3f(x1, y1, -z);
+                gl.glVertex3f(x1, y1, z);
+                gl.glVertex3f(x1, y2, z);
+                gl.glVertex3f(x1, y2, -z);
+            gl.glEnd();
+
+            // Topo
+            gl.glBegin(GL2.GL_QUADS);
+                gl.glVertex3f(x1, y2, z);
+                gl.glVertex3f(x2, y2, z);
+                gl.glVertex3f(x2, y2, -z);
+                gl.glVertex3f(x1, y2, -z);
+            gl.glEnd();
+
+            // Base
+            gl.glBegin(GL2.GL_QUADS);
+                gl.glVertex3f(x1, y1, z);
+                gl.glVertex3f(x2, y1, z);
+                gl.glVertex3f(x2, y1, -z);
+                gl.glVertex3f(x1, y1, -z);
+            gl.glEnd();
+
+        gl.glPopMatrix();
         gl.glFlush();
     }
 
@@ -70,19 +116,21 @@ public class Graphics {
         float x2 = x1 + width;
         float y2 = y1 + height;
 
+        float z = 13;
+
         gl.glBegin(GL2.GL_QUADS);
 
         gl.glTexCoord2f(0, 1);
-        gl.glVertex2f(x1, y1);
+        gl.glVertex3f(x1, y1, z);
 
         gl.glTexCoord2f(1, 1);
-        gl.glVertex2f(x2, y1);
+        gl.glVertex3f(x2, y1, z);
 
         gl.glTexCoord2f(1, 0);
-        gl.glVertex2f(x2, y2);
+        gl.glVertex3f(x2, y2, z);
 
         gl.glTexCoord2f(0, 0);
-        gl.glVertex2f(x1, y2);
+        gl.glVertex3f(x1, y2, z);
 
         gl.glEnd();
 
@@ -114,19 +162,21 @@ public class Graphics {
             float x2 = x1 + width;
             float y2 = y1 + height;
 
+            float z = 128;
+
             gl.glBegin(GL2.GL_QUADS);
 
             gl.glTexCoord2f(0, 1);
-            gl.glVertex2f(x1, y1);
+            gl.glVertex3f(x1, y1, z);
 
             gl.glTexCoord2f(1, 1);
-            gl.glVertex2f(x2, y1);
+            gl.glVertex3f(x2, y1, z);
 
             gl.glTexCoord2f(1, 0);
-            gl.glVertex2f(x2, y2);
+            gl.glVertex3f(x2, y2, z);
 
             gl.glTexCoord2f(0, 0);
-            gl.glVertex2f(x1, y2);
+            gl.glVertex3f(x1, y2, z);
 
             gl.glEnd();
             gl.glFlush();

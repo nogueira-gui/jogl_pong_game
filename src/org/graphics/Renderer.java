@@ -30,7 +30,7 @@ public class Renderer {
         window.setSize(screenWidth, screenHeight);
         window.setDefaultCloseOperation(WindowClosingProtocol.WindowClosingMode.DISPOSE_ON_CLOSE);
         window.setResizable(false);
-        window.setUndecorated(true);
+        window.setUndecorated(false);
 
         window.addWindowListener(new WindowListener());
         window.addGLEventListener(new EventListener());

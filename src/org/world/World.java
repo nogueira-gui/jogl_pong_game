@@ -6,6 +6,7 @@ import org.entities.Block;
 import org.entities.InfoBoard;
 import org.entities.Player;
 import org.graphics.Color;
+import org.graphics.EventListener;
 import org.graphics.Screen;
 import org.utils.Utils;
 
@@ -98,9 +99,12 @@ public class World {
 
     public static void render() {
         try {
+            EventListener.turnOffTheLights();
+            board.render(player);
+            EventListener.turnOnTheLights();
+
             player.render();
             ball.render();
-            board.render(player);
 
             for (Block block: blocks) {
                 if (block.isDestroyed()) {
@@ -281,6 +285,14 @@ public class World {
 
     public static float getPlayerY() {
         return player.getY();
+    }
+
+    public static float getBallX() {
+        return ball.getX();
+    }
+
+    public static float getBallY() {
+        return ball.getY();
     }
 
     public static void throwBall() {
