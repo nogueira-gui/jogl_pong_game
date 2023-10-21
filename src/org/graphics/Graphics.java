@@ -41,8 +41,9 @@ public class Graphics {
 
             double x = radius * Math.cos(angle) + centerX;
             double y = radius * Math.sin(angle) + centerY;
+            double z = 2;
 
-            gl.glVertex2d(x, y);
+            gl.glVertex3d(x, y, z);
         }
         gl.glEnd();
         gl.glFlush();

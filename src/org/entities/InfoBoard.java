@@ -22,7 +22,7 @@ public class InfoBoard extends Rectangle {
     public void update() {
     }
 
-    public void render(Player player) {
+    public void render(Player player, Ball ball) {
         Graphics.fillRect(x, y, width, height, color);
 
         int letterSize = 42;
@@ -33,6 +33,7 @@ public class InfoBoard extends Rectangle {
         // FPS Counter
         Graphics.writeText( (BOARD_WIDTH / 2) - letterSize * 2, BOARD_Y, letterSize, letterSize, String.valueOf(GameLoop.getFPS()));
 
+        // Live counter
         int TOTAL_LIVES = Player.TOTAL_LIVES;
         int REMAINING_LIVES = player.getRemainingLives();
 
@@ -43,6 +44,20 @@ public class InfoBoard extends Rectangle {
 
             Graphics.drawImage(x, BOARD_Y, 0.5f, "heart");
         }
+
+        // Ball init direction
+        float x = (float) ((BOARD_WIDTH / 2) * 0.5);
+        float spacing = 25;
+
+        if (ball.getBallInitX() > 0 ) {
+
+            Graphics.fillCircle(x, BOARD_Y, 10, new Color(0, 0, 0, 1));
+            Graphics.drawImage(x + spacing, BOARD_Y, 0.5f, "right_arrow");
+            return;
+        }
+
+        Graphics.fillCircle(x, BOARD_Y, 10, new Color(0, 0, 0, 1));
+        Graphics.drawImage(x - spacing, BOARD_Y, 0.5f, "left_arrow");
     }
 
     @Override

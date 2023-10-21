@@ -18,6 +18,8 @@ public class Ball extends Circle {
     private boolean ballThrown = false;
     private boolean initFall = true;
 
+    private int initX = randomInitX();
+
     public Ball() {
         super(0, 0, 10, new Color(255, 255, 255, 255));
     }
@@ -81,7 +83,7 @@ public class Ball extends Circle {
         }
 
         if (isBallCollided && ballThrown && initFall) {
-            xInput = randomInitX();
+            xInput = initX;
             initFall = false;
         }
 
@@ -112,10 +114,13 @@ public class Ball extends Circle {
     }
 
     public void throwBall() {
-
         if (!ballThrown && !World.ignoreNextThrow) {
             yInput++;
             ballThrown = true;
         }
+    }
+
+    public int getBallInitX() {
+        return initX;
     }
 }

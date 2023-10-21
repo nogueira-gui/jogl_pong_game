@@ -100,7 +100,7 @@ public class World {
     public static void render() {
         try {
             EventListener.turnOffTheLights();
-            board.render(player);
+            board.render(player, ball);
             EventListener.turnOnTheLights();
 
             player.render();
