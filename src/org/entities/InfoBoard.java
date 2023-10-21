@@ -27,8 +27,10 @@ public class InfoBoard extends Rectangle {
 
         int letterSize = 42;
 
+        // Player score
         Graphics.writeText( -BOARD_WIDTH / 2, BOARD_Y, letterSize, letterSize, String.valueOf(player.getScore()));
 
+        // FPS Counter
         Graphics.writeText( (BOARD_WIDTH / 2) - letterSize * 2, BOARD_Y, letterSize, letterSize, String.valueOf(GameLoop.getFPS()));
 
         int TOTAL_LIVES = Player.TOTAL_LIVES;

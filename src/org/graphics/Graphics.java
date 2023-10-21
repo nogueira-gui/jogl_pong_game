@@ -13,12 +13,9 @@ public class Graphics {
         float x2 = x1 + width;
         float y2 = y1 + height;
 
-        float z = -12.8f;
-
-
+        float z = 0;
 
         gl.glPushMatrix();
-            // Frente
             gl.glBegin(GL2.GL_QUADS);
                 gl.glColor3f(color.getRed(), color.getGreen(), color.getBlue());
                 gl.glVertex3f(x1, y1, z);
@@ -26,47 +23,6 @@ public class Graphics {
                 gl.glVertex3f(x2, y2, z);
                 gl.glVertex3f(x1, y2, z);
             gl.glEnd();
-
-            // Tras
-            gl.glBegin(GL2.GL_QUADS);
-                gl.glVertex3f(x1, y1, -z);
-                gl.glVertex3f(x2, y1, -z);
-                gl.glVertex3f(x2, y2, -z);
-                gl.glVertex3f(x1, y2, -z);
-            gl.glEnd();
-
-            // Direita
-            gl.glBegin(GL2.GL_QUADS);
-                gl.glVertex3f(x2, y1, -z);
-                gl.glVertex3f(x2, y1, z);
-                gl.glVertex3f(x2, y2, z);
-                gl.glVertex3f(x2, y2, -z);
-            gl.glEnd();
-
-            // Esquerda
-            gl.glBegin(GL2.GL_QUADS);
-                gl.glVertex3f(x1, y1, -z);
-                gl.glVertex3f(x1, y1, z);
-                gl.glVertex3f(x1, y2, z);
-                gl.glVertex3f(x1, y2, -z);
-            gl.glEnd();
-
-            // Topo
-            gl.glBegin(GL2.GL_QUADS);
-                gl.glVertex3f(x1, y2, z);
-                gl.glVertex3f(x2, y2, z);
-                gl.glVertex3f(x2, y2, -z);
-                gl.glVertex3f(x1, y2, -z);
-            gl.glEnd();
-
-            // Base
-            gl.glBegin(GL2.GL_QUADS);
-                gl.glVertex3f(x1, y1, z);
-                gl.glVertex3f(x2, y1, z);
-                gl.glVertex3f(x2, y1, -z);
-                gl.glVertex3f(x1, y1, -z);
-            gl.glEnd();
-
         gl.glPopMatrix();
         gl.glFlush();
     }
@@ -93,6 +49,8 @@ public class Graphics {
     }
 
     public static void drawImage(float x, float y, float scaleFactor, String imageName) {
+        gl.glDisable(GL2.GL_DEPTH_TEST);
+
         float width = 64 * scaleFactor;
         float height = 64 * scaleFactor;
 
@@ -109,14 +67,12 @@ public class Graphics {
 
         gl.glColor4f(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
 
-
-
         float x1 = x - (width / 2);
         float y1 = y - (height / 2);
         float x2 = x1 + width;
         float y2 = y1 + height;
 
-        float z = 13;
+        float z = 2;
 
         gl.glBegin(GL2.GL_QUADS);
 
@@ -138,9 +94,12 @@ public class Graphics {
 
         gl.glFlush();
 
+        gl.glEnable(GL2.GL_DEPTH_TEST);
     }
 
     public static void writeText(float x, float y, float width, float height, String text) {
+        gl.glDisable(GL2.GL_DEPTH_TEST);
+
         int position = 1;
         for (String c : text.toLowerCase().split("")) {
             String letter = "letter_" + c;
@@ -157,12 +116,12 @@ public class Graphics {
 
             gl.glColor4f(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
 
-            float x1 = (float) ((x + position * width / 1.5) - (width / 2));
+            float x1 = ((x + position * width / 1.5f) - (width / 2));
             float y1 = y - (height / 2);
             float x2 = x1 + width;
             float y2 = y1 + height;
 
-            float z = 128;
+            float z = 2;
 
             gl.glBegin(GL2.GL_QUADS);
 
@@ -184,5 +143,7 @@ public class Graphics {
             gl.glBindTexture(GL2.GL_TEXTURE_2D, 0);
             position++;
         }
+
+        gl.glEnable(GL2.GL_DEPTH_TEST);
     }
 }
