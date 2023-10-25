@@ -117,7 +117,7 @@ public class Graphics {
 
             gl.glColor4f(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
 
-            float x1 = ((x + position * width / 1.5f) - (width / 2));
+            float x1 = ((x + position * width) - (width / 2));
             float y1 = y - (height / 2);
             float x2 = x1 + width;
             float y2 = y1 + height;
