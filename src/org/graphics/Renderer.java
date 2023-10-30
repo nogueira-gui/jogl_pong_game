@@ -28,6 +28,8 @@ public class Renderer {
 
         window = GLWindow.create(caps);
         window.setSize(screenWidth, screenHeight);
+        window.setTitle("PONG");
+
         window.setDefaultCloseOperation(WindowClosingProtocol.WindowClosingMode.DISPOSE_ON_CLOSE);
         window.setResizable(false);
         window.setUndecorated(false);

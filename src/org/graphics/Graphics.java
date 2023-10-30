@@ -3,6 +3,7 @@ package org.graphics;
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.util.texture.Texture;
 import org.textures.TextureManager;
+import org.textures.TextureTranslator;
 
 public class Graphics {
 
@@ -107,6 +108,8 @@ public class Graphics {
                 position++;
                 continue;
             }
+
+            c = TextureTranslator.translate(c);
 
             String letter = "letter_" + c + "_" + textColor.getColor();
 

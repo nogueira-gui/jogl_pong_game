@@ -29,7 +29,7 @@ public class RendererInputControl extends KeyboardListener {
             toggleFullscreen();
         }
 
-        if (getKey(KeyEvent.VK_ESCAPE) || GameLoop.isPaused() && getKey(KeyEvent.VK_SPACE)) {
+        if (World.gameStarted && (getKey(KeyEvent.VK_ESCAPE) || GameLoop.isPaused() && getKey(KeyEvent.VK_SPACE))) {
             if (World.isGameLost() || World.isGameWon()) {
                 return;
             }
@@ -40,9 +40,10 @@ public class RendererInputControl extends KeyboardListener {
 
             if (GameLoop.isPaused()) {
                 GameLoop.resumeGame();
-            } else {
-                GameLoop.pauseGame();
+                return;
             }
+
+            GameLoop.pauseGame();
         }
     }
 
