@@ -108,7 +108,8 @@ public class MainMenu {
             Graphics.writeText(x + 2, y - 2, letterSize, options[index], TextColor.WHITE);
 
             if (index == chosenOption) {
-                Graphics.drawImage(x - 20, y, 0.7f, "right_arrow");
+                Graphics.drawImage(x - 30, y, 0.7f, "selector_right");
+                Graphics.drawImage(x + textSize + 30, y, 0.7f, "selector_left");
             }
 
             y -= letterSize * 2;
@@ -177,12 +178,12 @@ public class MainMenu {
 
         y -= 40;
         letterSize = 16;
-        Graphics.writeText(x, y, letterSize, "Ashlley Assis - / Guide writer", TextColor.BLACK);
-        Graphics.writeText(x, y, letterSize, "Ashlley Assis - / Guide writer", TextColor.WHITE);
+        Graphics.writeText(x, y, letterSize, "Ashlley Assis - 125111357458 / Guide writer", TextColor.BLACK);
+        Graphics.writeText(x, y, letterSize, "Ashlley Assis - 125111357458 / Guide writer", TextColor.WHITE);
 
         y -= 40;
-        Graphics.writeText(x, y, letterSize, "Guilherme Nogueira - / Desenvolvedor", TextColor.BLACK);
-        Graphics.writeText(x, y, letterSize, "Guilherme Nogueira - / Desenvolvedor", TextColor.WHITE);
+        Graphics.writeText(x, y, letterSize, "Guilherme Nogueira - 12523218818 / Desenvolvedor", TextColor.BLACK);
+        Graphics.writeText(x, y, letterSize, "Guilherme Nogueira - 12523218818 / Desenvolvedor", TextColor.WHITE);
 
         y -= 40;
         Graphics.writeText(x, y, letterSize, "Gustavo Aciem - 125111361436 / Design", TextColor.BLACK);
@@ -197,8 +198,8 @@ public class MainMenu {
         Graphics.writeText(x, y, letterSize, "Riley Ramalho - 125111369125 / Texture maker", TextColor.WHITE);
 
         y -= 40;
-        Graphics.writeText(x, y, letterSize, "Victor Hugo - / Design", TextColor.BLACK);
-        Graphics.writeText(x, y, letterSize, "Victor Hugo - / Design", TextColor.WHITE);
+        Graphics.writeText(x, y, letterSize, "Victor Hugo - 125111369125 / Design", TextColor.BLACK);
+        Graphics.writeText(x, y, letterSize, "Victor Hugo - 125111369125 / Design", TextColor.WHITE);
 
         y = -Screen.getHalfScreenHeight() + 130;
         Graphics.fillRect(0, y, Screen.getScreenWidth() * 0.9f, 3, new Color(255, 255, 255, 1));

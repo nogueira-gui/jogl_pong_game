@@ -52,12 +52,12 @@ public class InfoBoard extends Rectangle {
 
         if (ball.getBallInitX() > 0 ) {
             Graphics.fillCircle(x, BOARD_Y, 10, new Color(0, 0, 0, 1));
-            Graphics.drawImage(x + spacing, BOARD_Y, 0.5f, "right_arrow");
+            Graphics.drawImage(x + spacing, BOARD_Y, 0.5f, "right_arrow_black");
             return;
         }
 
         Graphics.fillCircle(x, BOARD_Y, 10, new Color(0, 0, 0, 1));
-        Graphics.drawImage(x - spacing, BOARD_Y, 0.5f, "left_arrow");
+        Graphics.drawImage(x - spacing, BOARD_Y, 0.5f, "left_arrow_black");
     }
 
     @Override
