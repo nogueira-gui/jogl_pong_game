@@ -4,6 +4,7 @@ import org.engine.GameLoop;
 import org.graphics.Color;
 import org.graphics.Graphics;
 import org.graphics.Screen;
+import org.graphics.TextColor;
 import org.objects.Rectangle;
 import org.textures.TextureManager;
 
@@ -28,10 +29,10 @@ public class InfoBoard extends Rectangle {
         int letterSize = 42;
 
         // Player score
-        Graphics.writeText( -BOARD_WIDTH / 2, BOARD_Y, letterSize, letterSize, String.valueOf(player.getScore()));
+        Graphics.writeText( -BOARD_WIDTH / 2, BOARD_Y, letterSize, String.valueOf(player.getScore()), TextColor.BLACK);
 
         // FPS Counter
-        Graphics.writeText( (BOARD_WIDTH / 2) - 64 * 2, BOARD_Y, letterSize, letterSize, String.valueOf(GameLoop.getFPS()));
+        Graphics.writeText( (BOARD_WIDTH / 2) - 64 * 2, BOARD_Y, letterSize, String.valueOf(GameLoop.getFPS()), TextColor.BLACK);
 
         // Live counter
         int TOTAL_LIVES = Player.TOTAL_LIVES;

@@ -8,19 +8,159 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e85b5a15-e1ad-4da4-998d-9de818c61506" name="Changes" comment=":sparkles: feat: Adding information about ball X init">
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_0_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_0_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_1_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_1_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_2_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_2_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_3_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_3_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_4_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_4_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_5_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_5_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_6_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_6_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_7_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_7_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_8_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_8_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_9_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_9_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_a_acute_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_a_acute_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_a_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_a_tilde_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_a_tilde_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_a_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_apostrophe_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_apostrophe_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_b_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_b_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_c_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_c_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_cedilla_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_cedilla_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_colon_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_colon_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_d_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_d_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_dash_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_dash_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_dot_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_dot_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_e_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_e_caret_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_e_tilde_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_e_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_exclamation_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_exclamation_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_f_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_f_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_g_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_g_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_h_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_h_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_i_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_i_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_j_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_j_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_k_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_k_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_l_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_l_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_m_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_m_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_n_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_n_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_o_acute_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_o_acute_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_o_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_o_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_p_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_p_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_q_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_q_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_r_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_r_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_s_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_s_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_slash_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_slash_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_t_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_t_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_u_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_u_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_v_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_v_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_w_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_w_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_x_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_x_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_y_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_y_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_z_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/letter_z_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/menu_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/graphics/TextColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/menus/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_10_2023_10_39_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_10_2023_10_39__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/letter_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/letter_9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_a_acute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_a_tilde.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_apostrophe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_cedilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_colon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_dash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_dot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_e_caret.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_exclamation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_g.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_i.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_j.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_k.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_o_acute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_p.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_q.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_r.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_slash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_t.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_u.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_w.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/letter_z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/engine/GameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/engine/GameLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/entities/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/entities/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/entities/InfoBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/entities/InfoBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/graphics/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/graphics/EventListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/graphics/Graphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/graphics/Graphics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/world/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/world/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

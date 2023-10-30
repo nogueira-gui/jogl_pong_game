@@ -10,8 +10,8 @@ public class GameLoop {
     public static boolean running = false;
     private static boolean paused = false;
 
-    private static final int targetFPS = 60;
-    private static final int targetTime = NANOSECOND / targetFPS;
+    private static int targetFPS = 10;
+    private static int targetTime = NANOSECOND / targetFPS;
     private static int currentFPS = 0;
 
     private static int updates = 0;
@@ -98,5 +98,10 @@ public class GameLoop {
 
     public static boolean isPaused() {
         return paused;
+    }
+
+    public static void setFPS(int fps) {
+        targetFPS = fps;
+        targetTime = NANOSECOND / targetFPS;
     }
 }

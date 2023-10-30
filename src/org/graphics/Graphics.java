@@ -7,6 +7,8 @@ import org.textures.TextureManager;
 public class Graphics {
 
     private static final GL2 gl = EventListener.gl;
+    public static final int IMAGE_SIZE = 64;
+
     public static void fillRect(float x, float y, float width, float height, Color color) {
         float x1 = x - (width / 2);
         float y1 = y - (height / 2);
@@ -52,11 +54,10 @@ public class Graphics {
     public static void drawImage(float x, float y, float scaleFactor, String imageName) {
         gl.glDisable(GL2.GL_DEPTH_TEST);
 
-        float width = 64 * scaleFactor;
-        float height = 64 * scaleFactor;
+        float width = IMAGE_SIZE * scaleFactor;
+        float height = IMAGE_SIZE * scaleFactor;
 
         Texture texture = TextureManager.getTexture(imageName);
-        Color color = TextureManager.getPredominantColor(imageName);
 
         if (texture != null) {
             gl.glBindTexture(GL2.GL_TEXTURE_2D, texture.getTextureObject());
@@ -65,8 +66,7 @@ public class Graphics {
             texture.setTexParameteri(gl, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_NEAREST);
         }
 
-
-        gl.glColor4f(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
+        gl.glColor4f(1, 1, 1, 1);
 
         float x1 = x - (width / 2);
         float y1 = y - (height / 2);
@@ -98,12 +98,17 @@ public class Graphics {
         gl.glEnable(GL2.GL_DEPTH_TEST);
     }
 
-    public static void writeText(float x, float y, float width, float height, String text) {
+    public static void writeText(float x, float y, float fontSize, String text, TextColor textColor) {
         gl.glDisable(GL2.GL_DEPTH_TEST);
 
-        int position = 1;
+        int position = 0;
         for (String c : text.toLowerCase().split("")) {
-            String letter = "letter_" + c;
+            if (c.equals(" ")) {
+                position++;
+                continue;
+            }
+
+            String letter = "letter_" + c + "_" + textColor.getColor();
 
             Texture texture = TextureManager.getTexture(letter);
             Color color = TextureManager.getPredominantColor(letter);
@@ -117,10 +122,10 @@ public class Graphics {
 
             gl.glColor4f(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
 
-            float x1 = ((x + position * width) - (width / 2));
-            float y1 = y - (height / 2);
-            float x2 = x1 + width;
-            float y2 = y1 + height;
+            float x1 = x + position * fontSize;
+            float y1 = y - (fontSize / 2);
+            float x2 = x1 + fontSize;
+            float y2 = y1 + fontSize;
 
             float z = 2;
 

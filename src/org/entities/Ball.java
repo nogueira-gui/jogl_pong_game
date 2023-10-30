@@ -18,7 +18,7 @@ public class Ball extends Circle {
     private boolean ballThrown = false;
     private boolean initFall = true;
 
-    private int initX = randomInitX();
+    private final int initX = randomInitX();
 
     public Ball() {
         super(0, 0, 10, new Color(255, 255, 255, 255));

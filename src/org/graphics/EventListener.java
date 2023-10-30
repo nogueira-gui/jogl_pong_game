@@ -12,6 +12,7 @@ public class EventListener implements GLEventListener {
     public static GL2 gl = null;
     public static GLUT glut = null;
     public static GLU glu = null;
+
     @Override
     public void init(GLAutoDrawable drawable) {
         gl = drawable.getGL().getGL2();
@@ -28,7 +29,8 @@ public class EventListener implements GLEventListener {
         gl.glBlendFunc(GL2.GL_SRC_ALPHA, GL2.GL_ONE_MINUS_SRC_ALPHA);
 
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
-        gl.glClearColor(0,0,0,1);
+
+        gl.glClearColor(0, 0, 0, 1);
 
         createLights();
 
@@ -44,7 +46,7 @@ public class EventListener implements GLEventListener {
     public void display(GLAutoDrawable drawable) {
         glut = new GLUT();
 
-        gl.glClearColor(0,0,0,1);
+        gl.glClearColor(0, 0, 0, 1);
 
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
         gl.glLoadIdentity();

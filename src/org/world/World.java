@@ -8,6 +8,7 @@ import org.entities.Player;
 import org.graphics.Color;
 import org.graphics.EventListener;
 import org.graphics.Screen;
+import org.menus.MainMenu;
 import org.utils.Utils;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -39,11 +40,18 @@ public class World {
 
     public static boolean ignoreNextThrow = false;
 
+    public static boolean gameStarted = false;
+
     static {
         initWorld();
     }
 
     public static void update() {
+        if (!gameStarted) {
+            MainMenu.update();
+            return;
+        }
+
         try {
             if (player.getScore() >= MAX_POINTS) {
                 levelCounter++;
@@ -98,6 +106,11 @@ public class World {
     }
 
     public static void render() {
+        if (!gameStarted) {
+            MainMenu.render();
+            return;
+        }
+
         try {
             EventListener.turnOffTheLights();
             board.render(player, ball);
