@@ -125,7 +125,7 @@ public class MainMenu {
         float x = (float) (-textSize / 2) - (Screen.getHalfScreenWidth() - textSize);
         float y = Screen.getHalfScreenHeight() - 100;
 
-        Graphics.drawImage(0, 0, 20, "submenu_background");
+        Graphics.drawImage(0, 0, Screen.getScreenWidth(), Screen.getScreenHeight(), 1, "submenu_background");
         Graphics.writeText(x, y, letterSize, "Comandos", TextColor.BLACK);
         Graphics.writeText(x + 2, y - 2, letterSize, "Comandos", TextColor.WHITE);
 
@@ -169,7 +169,7 @@ public class MainMenu {
         float x = (float) (-textSize / 2) - (Screen.getHalfScreenWidth() - textSize);
         float y = Screen.getHalfScreenHeight() - 100;
 
-        Graphics.drawImage(0, 0, 20, "submenu_background");
+        Graphics.drawImage(0, 0, Screen.getScreenWidth(), Screen.getScreenHeight(), 1, "submenu_background");
         Graphics.writeText(x, y, letterSize, "Sobre nos", TextColor.BLACK);
         Graphics.writeText(x + 2, y - 2, letterSize, "Sobre nos", TextColor.WHITE);
 

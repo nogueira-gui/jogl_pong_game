@@ -8,6 +8,7 @@ import org.graphics.Screen;
 import org.inputs.KeyboardListener;
 import org.objects.Rectangle;
 import org.utils.Utils;
+import org.world.World;
 
 public class Player extends Rectangle {
     public final static int PLAYER_WIDTH = 150;
@@ -28,11 +29,11 @@ public class Player extends Rectangle {
         float xInput = 0;
         float SPEED = 325f;
 
-        if(KeyboardListener.getKey(KeyEvent.VK_A) || KeyboardListener.getKey(KeyEvent.VK_LEFT)) {
+        if(World.gameStarted && (KeyboardListener.getKey(KeyEvent.VK_A) || KeyboardListener.getKey(KeyEvent.VK_LEFT))) {
             xInput--;
         }
 
-        if(KeyboardListener.getKey(KeyEvent.VK_D) || KeyboardListener.getKey(KeyEvent.VK_RIGHT)) {
+        if(World.gameStarted && (KeyboardListener.getKey(KeyEvent.VK_D) || KeyboardListener.getKey(KeyEvent.VK_RIGHT))) {
             xInput++;
         }
 

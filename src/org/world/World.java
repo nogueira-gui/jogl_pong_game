@@ -8,7 +8,10 @@ import org.entities.Player;
 import org.graphics.Color;
 import org.graphics.EventListener;
 import org.graphics.Screen;
+import org.menus.DefeatMenu;
+import org.menus.LevelCompleteMenu;
 import org.menus.MainMenu;
+import org.menus.WinMenu;
 import org.utils.Utils;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -36,11 +39,13 @@ public class World {
     private static int pointMultiplier = 3;
 
     private static int levelCounter = 1;
-    private final static int FINAL_LEVEL = 4;
+    private final static int FINAL_LEVEL = 2;
 
     public static boolean ignoreNextThrow = false;
 
     public static boolean gameStarted = false;
+
+    public static boolean nextLevel = false;
 
     static {
         initWorld();
@@ -59,8 +64,6 @@ public class World {
                 if (levelCounter > FINAL_LEVEL) {
                     wonGame = true;
 
-                    System.out.println("You won! Ctrl + R to restart");
-
                     GameLoop.pauseGame();
 
                     return;
@@ -68,7 +71,7 @@ public class World {
 
                 GameLoop.pauseGame();
 
-                System.out.printf("Level %d finished! Press SPACE to continue\n", levelCounter - 1);
+                nextLevel = true;
                 ignoreNextThrow = true;
 
                 decreaseBlockStep();
@@ -80,8 +83,6 @@ public class World {
 
             if (player.getRemainingLives() == 0) {
                 lostGame = !lostGame;
-
-                System.out.println("You lost! Ctrl + R to restart");
 
                 GameLoop.pauseGame();
             }
@@ -125,6 +126,19 @@ public class World {
                 }
             }
         } catch (NullPointerException ignored) {}
+
+        if (nextLevel) {
+            LevelCompleteMenu.render(levelCounter - 1);
+            return;
+        }
+
+        if (wonGame) {
+            WinMenu.render();
+        }
+
+        if (lostGame) {
+            DefeatMenu.render();
+        }
     }
 
     private static boolean checkCollision(Ball ball, Block block) {

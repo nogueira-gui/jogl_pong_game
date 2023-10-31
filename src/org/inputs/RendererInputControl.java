@@ -9,7 +9,7 @@ public class RendererInputControl extends KeyboardListener {
     @Override
     public void keyPressed(KeyEvent e) {
         if (getKey(KeyEvent.VK_CONTROL)) {
-            if (getKey(KeyEvent.VK_R)) {
+            if (World.gameStarted && getKey(KeyEvent.VK_R)) {
                 World.resetWorld(true);
                 GameLoop.resumeGame();
             }
@@ -21,7 +21,7 @@ public class RendererInputControl extends KeyboardListener {
             return;
         }
 
-        if (getKey(KeyEvent.VK_SPACE)) {
+        if (World.gameStarted && getKey(KeyEvent.VK_SPACE)) {
             World.throwBall();
         }
 
@@ -30,6 +30,8 @@ public class RendererInputControl extends KeyboardListener {
         }
 
         if (World.gameStarted && (getKey(KeyEvent.VK_ESCAPE) || GameLoop.isPaused() && getKey(KeyEvent.VK_SPACE))) {
+            World.nextLevel = false;
+
             if (World.isGameLost() || World.isGameWon()) {
                 return;
             }

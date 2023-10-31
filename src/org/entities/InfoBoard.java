@@ -26,13 +26,15 @@ public class InfoBoard extends Rectangle {
     public void render(Player player, Ball ball) {
         Graphics.fillRect(x, y, width, height, color);
 
-        int letterSize = 42;
+        int letterSize = 28;
 
         // Player score
-        Graphics.writeText( -BOARD_WIDTH / 2, BOARD_Y, letterSize, String.valueOf(player.getScore()), TextColor.BLACK);
+        String score = "Score " + player.getScore();
+        Graphics.writeText( -BOARD_WIDTH / 2, BOARD_Y, letterSize, score, TextColor.BLACK);
 
         // FPS Counter
-        Graphics.writeText( (BOARD_WIDTH / 2) - 64 * 2, BOARD_Y, letterSize, String.valueOf(GameLoop.getFPS()), TextColor.BLACK);
+        String fps = "FPS " + GameLoop.getFPS();
+        Graphics.writeText((float) ((BOARD_WIDTH / 2) - letterSize * 6.2), BOARD_Y, letterSize, fps, TextColor.BLACK);
 
         // Live counter
         int TOTAL_LIVES = Player.TOTAL_LIVES;
@@ -47,16 +49,17 @@ public class InfoBoard extends Rectangle {
         }
 
         // Ball init direction
-        float x = (float) ((BOARD_WIDTH / 2) * 0.5);
-        float spacing = 20;
+        float x = (float) ((BOARD_WIDTH / 2) * 0.45);
+        float spacing = 25;
+
+        Graphics.fillCircle(x, BOARD_Y, 12, new Color(0, 0, 0, 1));
+        Graphics.fillCircle(x, BOARD_Y, 7, new Color(255, 255, 255, 1));
 
         if (ball.getBallInitX() > 0 ) {
-            Graphics.fillCircle(x, BOARD_Y, 10, new Color(0, 0, 0, 1));
             Graphics.drawImage(x + spacing, BOARD_Y, 0.5f, "right_arrow_black");
             return;
         }
 
-        Graphics.fillCircle(x, BOARD_Y, 10, new Color(0, 0, 0, 1));
         Graphics.drawImage(x - spacing, BOARD_Y, 0.5f, "left_arrow_black");
     }
 

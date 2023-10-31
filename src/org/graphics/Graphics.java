@@ -20,7 +20,7 @@ public class Graphics {
 
         gl.glPushMatrix();
             gl.glBegin(GL2.GL_QUADS);
-                gl.glColor3f(color.getRed(), color.getGreen(), color.getBlue());
+                gl.glColor4f(color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha());
                 gl.glVertex3f(x1, y1, z);
                 gl.glVertex3f(x2, y1, z);
                 gl.glVertex3f(x2, y2, z);
@@ -57,6 +57,53 @@ public class Graphics {
 
         float width = IMAGE_SIZE * scaleFactor;
         float height = IMAGE_SIZE * scaleFactor;
+
+        Texture texture = TextureManager.getTexture(imageName);
+
+        if (texture != null) {
+            gl.glBindTexture(GL2.GL_TEXTURE_2D, texture.getTextureObject());
+
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_NEAREST);
+            texture.setTexParameteri(gl, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_NEAREST);
+        }
+
+        gl.glColor4f(1, 1, 1, 1);
+
+        float x1 = x - (width / 2);
+        float y1 = y - (height / 2);
+        float x2 = x1 + width;
+        float y2 = y1 + height;
+
+        float z = 2;
+
+        gl.glBegin(GL2.GL_QUADS);
+
+        gl.glTexCoord2f(0, 1);
+        gl.glVertex3f(x1, y1, z);
+
+        gl.glTexCoord2f(1, 1);
+        gl.glVertex3f(x2, y1, z);
+
+        gl.glTexCoord2f(1, 0);
+        gl.glVertex3f(x2, y2, z);
+
+        gl.glTexCoord2f(0, 0);
+        gl.glVertex3f(x1, y2, z);
+
+        gl.glEnd();
+
+        gl.glBindTexture(GL2.GL_TEXTURE_2D, 0);
+
+        gl.glFlush();
+
+        gl.glEnable(GL2.GL_DEPTH_TEST);
+    }
+
+    public static void drawImage(float x, float y, float width, float height, float scaleFactor, String imageName) {
+        gl.glDisable(GL2.GL_DEPTH_TEST);
+
+        width = width * scaleFactor;
+        height = height * scaleFactor;
 
         Texture texture = TextureManager.getTexture(imageName);
 
