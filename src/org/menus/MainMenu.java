@@ -178,8 +178,8 @@ public class MainMenu {
 
         y -= 40;
         letterSize = 16;
-        Graphics.writeText(x, y, letterSize, "Ashlley Assis - 125111357458 / Guide writer", TextColor.BLACK);
-        Graphics.writeText(x, y, letterSize, "Ashlley Assis - 125111357458 / Guide writer", TextColor.WHITE);
+        Graphics.writeText(x, y, letterSize, "Ashlley Assis - 125111357458 / Design", TextColor.BLACK);
+        Graphics.writeText(x, y, letterSize, "Ashlley Assis - 125111357458 / Design", TextColor.WHITE);
 
         y -= 40;
         Graphics.writeText(x, y, letterSize, "Guilherme Nogueira - 12523218818 / Desenvolvedor", TextColor.BLACK);
