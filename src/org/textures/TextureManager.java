@@ -9,7 +9,10 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Objects;
@@ -20,11 +23,7 @@ public class TextureManager {
     public final static int TEXTURE_WIDTH = 64;
 
     private static File[] getFiles() {
-        try {
-            return new File(Objects.requireNonNull(TextureManager.class.getResource("/assets/")).toURI()).listFiles();
-        } catch (URISyntaxException ignored) {
-            return null;
-        }
+        return new File(String.valueOf(Paths.get(System.getProperty("user.dir"), "assets"))).listFiles();
     }
 
     private static Texture extractTextureFromImage(BufferedImage image) {
